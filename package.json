@@ -1,0 +1,45 @@
+{
+  "name": "@ng-dynamic-forms/ui-primeng",
+  "version": "5.4.1",
+  "description": "PrimeNG UI package for NG Dynamic Forms",
+  "main": "./bundles/ui-primeng.umd.js",
+  "module": "./@ng-dynamic-forms/ui-primeng.es.js",
+  "typings": "./ui-primeng.d.ts",
+  "keywords": [
+    "angular",
+    "angular 2",
+    "dynamic forms",
+    "forms",
+    "ng dynamic forms",
+    "prime ng",
+    "reactive forms",
+    "ui"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/udos86/ng-dynamic-forms.git"
+  },
+  "author": {
+    "name": "Udo Schöfer",
+    "email": "ng2-dynamic-forms@udos86.de",
+    "url": "https://github.com/udos86/ng-dynamic-forms"
+  },
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/udos86/ng-dynamic-forms/issues"
+  },
+  "homepage": "https://github.com/udos86/ng-dynamic-forms#readme",
+  "peerDependencies": {
+    "@angular/core": "^5.0.0",
+    "@angular/common": "^5.0.0",
+    "@angular/forms": "^5.0.0",
+    "@ng-dynamic-forms/core": "^5.4.1",
+    "primeng": "^5.0.0",
+    "rxjs": "^5.5.2"
+  },
+  "optionalDependencies": {
+    "quill": "^1.2.3"
+  },
+  "_from": "@ng-dynamic-forms/ui-primeng@5.4.1",
+  "_resolved": "http://registry.npm.taobao.org/@ng-dynamic-forms/ui-primeng/download/@ng-dynamic-forms/ui-primeng-5.4.1.tgz"
+}

@@ -1,0 +1,33 @@
+import { ChangeDetectorRef, EventEmitter, OnChanges, QueryList, SimpleChanges } from "@angular/core";
+import { FormGroup } from "@angular/forms";
+import { AutoComplete, Calendar, Checkbox, Chips, ColorPicker, Dropdown, Editor, InputMask, InputSwitch, MultiSelect, Rating, Slider, Spinner } from "primeng/primeng";
+import { DynamicFormArrayGroupModel, DynamicFormControlComponent, DynamicFormControlEvent, DynamicFormControlModel, DynamicFormLayout, DynamicFormLayoutService, DynamicFormValidationService, DynamicTemplateDirective } from "@ng-dynamic-forms/core";
+import { PrimeNGFormControlType } from "./dynamic-primeng-form.const";
+export declare type PrimeNGFormControlComponent = AutoComplete | Calendar | Checkbox | Chips | ColorPicker | Dropdown | Editor | InputMask | InputSwitch | MultiSelect | Rating | Slider | Spinner;
+export declare class DynamicPrimeNGFormControlComponent extends DynamicFormControlComponent implements OnChanges {
+    protected changeDetectorRef: ChangeDetectorRef;
+    protected layoutService: DynamicFormLayoutService;
+    protected validationService: DynamicFormValidationService;
+    contentTemplateList: QueryList<DynamicTemplateDirective>;
+    inputTemplateList: QueryList<DynamicTemplateDirective>;
+    bindId: boolean;
+    context: DynamicFormArrayGroupModel | null;
+    group: FormGroup;
+    hasErrorMessaging: boolean;
+    layout: DynamicFormLayout;
+    model: DynamicFormControlModel;
+    blur: EventEmitter<DynamicFormControlEvent>;
+    change: EventEmitter<DynamicFormControlEvent>;
+    focus: EventEmitter<DynamicFormControlEvent>;
+    customEvent: EventEmitter<DynamicFormControlEvent>;
+    pViewChild: PrimeNGFormControlComponent | undefined;
+    suggestions: string[];
+    type: PrimeNGFormControlType | null;
+    constructor(changeDetectorRef: ChangeDetectorRef, layoutService: DynamicFormLayoutService, validationService: DynamicFormValidationService);
+    ngOnChanges(changes: SimpleChanges): void;
+    protected setTemplateDirective(directive: DynamicTemplateDirective): void;
+    protected setTemplates(): void;
+    onAutoComplete(_$event: any): void;
+    static getFormControlType(model: DynamicFormControlModel): PrimeNGFormControlType | null;
+    static getTemplateDirectives(component: PrimeNGFormControlComponent): any | null;
+}

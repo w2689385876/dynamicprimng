@@ -1,0 +1,12 @@
+<dynamic-primeng-form-control *ngFor="let model of formModel; trackBy: trackByFn"
+                              [group]="formGroup"
+                              [hasErrorMessaging]="model.hasErrorMessages"
+                              [hidden]="model.hidden"
+                              [layout]="formLayout"
+                              [model]="model"
+                              [ngClass]="[getClass(model, 'element', 'host'), getClass(model, 'grid', 'host')]"
+                              [templates]="templates"
+                              (dfBlur)="onEvent($event, 'blur')"
+                              (dfChange)="onEvent($event, 'change')"
+                              (dfFocus)="onEvent($event, 'focus')"
+                              (pEvent)="onEvent($event, 'custom')"></dynamic-primeng-form-control>
